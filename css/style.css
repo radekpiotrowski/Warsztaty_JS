@@ -313,3 +313,10 @@ footer p {
 .to-top {
     float: right;
 }
+
+.org{
+    display: none;
+}
+.visible {
+    display: inline-block;
+}

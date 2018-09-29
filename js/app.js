@@ -64,10 +64,33 @@ document.addEventListener('DOMContentLoaded', function () {
         window.scroll (0,0);
     });
     
+    // zadanie 5
+    var items = document.querySelectorAll('.org'); //tworzy tablicę ze wszystkimi elementami class=org
+    var dots = document.querySelectorAll('.dot');
+    var indexClicked; //deklaracaj zmiennej pomocniczej
     
+    dots[0].addEventListener('click', function(){
+        console.log(this.classList);
+    });
     
-    
-    
+    for (var i=0; i < items.length; i++){
+        dots[i].addEventListener('click', function(){
+            for (var i=0; i < items.length; i++){
+                dots[i].classList.remove('active');
+                items[i].classList.remove('visible');
+            }
+            this.classList.add('active');
+            
+            for (var i=0; i < items.length; i++){
+                if (dots[i].classList.contains('active')){
+                    indexClicked = i;
+                    break;
+                }
+            } 
+            
+            items[indexClicked].classList.add('visible');
+        });
+    }
     
 });
 
