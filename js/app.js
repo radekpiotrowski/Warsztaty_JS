@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     var buttons = document.querySelectorAll('.read-more');
     
-    
+    //zadanie 2
     function showHide() {
         var textArea = this.previousElementSibling;
 
@@ -44,6 +44,24 @@ document.addEventListener('DOMContentLoaded', function () {
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener('click', showHide);
     }
+    
+    
+    //zadanie 3
+    var menu = document.querySelector('.navbar-fixed-top');
+    
+    window.addEventListener('scroll', function() {
+      menu.style.borderBottom = '1px solid #7f7f7f';   
+      //console.log(menu.scrollTop); //sprawdznie ile px od góry jest element menu
+        
+      var zielony = document.querySelector('.main-slogan');
+      console.log(zielony.scrollTop);
+    });
+    
+    
+    
+    
+    
+    
     
     
 });
