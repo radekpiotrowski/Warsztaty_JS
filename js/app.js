@@ -53,11 +53,16 @@ document.addEventListener('DOMContentLoaded', function () {
       menu.style.borderBottom = '1px solid #7f7f7f';   
       //console.log(menu.scrollTop); //sprawdznie ile px od góry jest element menu
         
-      var zielony = document.querySelector('.main-slogan');
-      console.log(zielony.scrollTop);
+      //var zielony = document.querySelector('.main-slogan');
+      //console.log(zielony.scrollTop);
     });
     
+    //zadanie 4
+    var btnUp = document.querySelector('.btn-info');
     
+    btnUp.addEventListener ('click', function(){
+        window.scroll (0,0);
+    });
     
     
     

@@ -310,3 +310,6 @@ footer p {
 .more {
     display: none;
 }
+.to-top {
+    float: right;
+}
